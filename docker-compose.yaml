@@ -1,0 +1,32 @@
+version: "3"
+volumes:
+  app-cache:
+    driver: local
+
+services:
+  dalle-client:
+    container_name: dalle_client_react
+    image: dalle_client_react:latest
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    # restart: always
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+  dalle-mini-flaskapp:
+    container_name: dalle_server_flask
+    image: dalle_mini_flaskapp:latest
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - app-cache:/root/.cache
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: ["gpu"]
