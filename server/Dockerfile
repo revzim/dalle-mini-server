@@ -28,5 +28,5 @@ RUN pip3 install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-rel
 # add source code
 COPY . /app
 
-# run server --model_version="Mega" --save_to_disk=True
+# run server --model_version="Mega" --save_to_disk=true --seed="the dog is very cool"
 CMD python3 app.py --port=8080

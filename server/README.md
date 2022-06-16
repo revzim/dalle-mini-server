@@ -3,6 +3,9 @@
 flask app server to use dalle-mini
 
 ## dev
+* added args
+  - --seed
+    - pass a specific seed for dalle image generation or leave blank and a seed will be randomly generated
 * `consts.py`
   - tweak params used to generate images from dalle-mini
 

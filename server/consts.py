@@ -17,6 +17,8 @@ GEN_TOP_P = None # 0.95
 TEMPERATURE  = None
 COND_SCALE = 10.0
 
+DEFAULT_SEED = "TEST_SEED"
+
 class ModelSize(Enum):
     MINI = "Mini"
     MEGA = "Mega"

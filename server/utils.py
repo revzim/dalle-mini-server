@@ -3,10 +3,10 @@ import base64
 import os
 from pathlib import Path
 from io import BytesIO
-from consts import ModelSize, IMAGES_OUTPUT_DIR
+from consts import ModelSize, IMAGES_OUTPUT_DIR, DEFAULT_SEED
 
-def generate_model_images(model, text_prompt, num_images, args):
-  imgs = model.generate_images(text_prompt, num_images)
+def generate_model_images(model, text_prompt, num_images, args, seed):
+  imgs = model.generate_images(text_prompt, num_images, seed)
 
   list_of_imgs = []
   if args.save_to_disk:
@@ -26,13 +26,9 @@ def generate_model_images(model, text_prompt, num_images, args):
   print(f"generated {num_images} images from text prompt [{text_prompt}]")
   return list_of_imgs
 
-def parse_request_and_generate_images(model, json_data, args):
+def parse_request_and_generate_images(model, json_data, args, seed):
   text_prompt, num_images = json_data["text"], json_data["num_images"]
-
-  print(f"attempting to generate {num_images} image(s) for: ${text_prompt}")
-
-  generated_imgs = generate_model_images(model, text_prompt, num_images, args)
-
+  generated_imgs = generate_model_images(model, text_prompt, num_images, args, seed)
   return generated_imgs
 
 def get_request_data(key, request):
@@ -68,3 +64,8 @@ def parse_arg_boolean(value):
 def parse_arg_dalle_version(value):
   value = value.lower()
   return ModelSize[value.upper()]
+
+def parse_arg_dalle_seed(value):
+  if len(value) == 0:
+    return DEFAULT_SEED
+  return value
