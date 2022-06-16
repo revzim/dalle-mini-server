@@ -1,14 +1,6 @@
-# dalle-mini-server
+# [dalle-mini-server][repo]
 
-## dockerized dev environment / playground for dalle-mini
-
-[1]: assets/
-[2]: assets/app/loading.png
-[unicorn_frog]: assets/frog%20riding%20a%20unicorn%20standing%20on%20top%20of%20a%20mountain%20of%20cookies/2.jpg
-[unicorn_frog2]: assets/frog%20riding%20a%20unicorn%20standing%20on%20top%20of%20a%20mountain%20of%20cookies/2.jpg
-[seal_otter]: assets/otter%20and%20seal%20sitting%20on%20an%20iceberg%20drawn%20in%20cartoon%20style/0.jpg
-[super_spider]: assets/superman%20punching%20spiderman%20on%20an%20iceberg/0.jpg
-[app_farmer]: assets/app/farmer.png
+## dockerized dev environment / playground for [dalle-mini][dalle_mini]
 
 ![farmer][app_farmer]
 
@@ -37,11 +29,11 @@ superman punching spiderman on an iceberg
     - `docker compose up`
   - docker only
     - `server/` & `client/` both contain respective Dockerfiles
-  - [dalle-mini api endpoints](http://localhost:8080) *local*
-  - [dalle-client frontend react app](localhost:3000) *local*
+  - [dalle-mini api endpoints][server_addr] *local*
+  - [dalle-client frontend react app][client_addr] *local*
 * LOCAL (LINUX/UNIX*)
   - server
-    - [pytorch required](https://pytorch.org/get-started/locally/)
+    - [pytorch required][pytorch]
     - `cd server`
     - *python venv recommended* `python -m venv .`
     - `pip install -r requirements.txt`
@@ -53,8 +45,22 @@ superman punching spiderman on an iceberg
 
 ### for testing / educational purposes only
 
+[dalle-mini][dalle_mini] trained models are used to generate images from a text prompt
+
+dev build pack inspired by [dalle-playground][dalle_pg]
+
 #### author: revzim
 
-[dalle-mini](https://github.com/borisdayma/dalle-mini) trained models are used to generate images from a text prompt
-
-dev build pack inspired by [dalle-playground](https://github.com/saharmor/dalle-playground)
+[1]: assets/
+[2]: assets/app/loading.png
+[unicorn_frog]: assets/frog%20riding%20a%20unicorn%20standing%20on%20top%20of%20a%20mountain%20of%20cookies/2.jpg
+[unicorn_frog2]: assets/frog%20riding%20a%20unicorn%20standing%20on%20top%20of%20a%20mountain%20of%20cookies/2.jpg
+[seal_otter]: assets/otter%20and%20seal%20sitting%20on%20an%20iceberg%20drawn%20in%20cartoon%20style/0.jpg
+[super_spider]: assets/superman%20punching%20spiderman%20on%20an%20iceberg/0.jpg
+[app_farmer]: assets/app/farmer.png
+[dalle_mini]: https://github.com/borisdayma/dalle-mini
+[dalle_pg]: https://github.com/saharmor/dalle-playground
+[server_addr]: http://localhost:8080
+[client_addr]: http://localhost:3000]
+[pytorch]: https://pytorch.org/get-started/locally/
+[repo]: https://github.com/revzim/dalle-mini-server.git
