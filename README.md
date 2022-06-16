@@ -43,6 +43,9 @@ superman punching spiderman on an iceberg
     - `yarn or npm install`
     - `yarn start or npm run start`
 
+**-important installation/run note-**
+* *dalle-mini uses large models that sometimes can take a couple minutes to load, please be patient while the server starts*
+
 ### for testing / educational purposes only
 
 [dalle-mini][dalle_mini] trained models are used to generate images from a text prompt
