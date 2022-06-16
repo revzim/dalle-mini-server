@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import * as axios from "axios"
 import { Link, Button, Grid, Card, CardHeader, CardContent, FormControl, InputLabel, Select, MenuItem, ImageList, ImageListItem, Box, Container, TextField, LinearProgress, Typography } from "@mui/material"
-
 import { purple } from "@mui/material/colors"
 
 function App() {
@@ -56,7 +55,6 @@ function App() {
   const handleImgCountChange = (e) => {
     e.preventDefault()
     const val = e.target.value
-    // console.log(val)
     setImgCount(parseInt(val))
   }
 
@@ -164,25 +162,6 @@ function App() {
         }
       </CardContent>
     </Card>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <h5 style={{ wordWrap: "auto", maxWidth: "50vw" }} >{title}</h5>
-    //     {
-    //       imgVals.length > 0 ? (
-    //         <>
-    //           <div style={{ height: "50vh", overflowY: "auto", width: "100%"  }}>
-    //             <ul style={{}}>
-    //               {getRenderContent(imgVals)}
-    //             </ul>
-    //           </div>
-    //         </>
-    //       ) : null
-    //     }
-    //     <form onSubmit={queryImg}>
-    //       <input disabled={loading} name="img_name" type="text" value={imgText} onChange={handleOnChangeImgText} />
-    //     </form>
-    //   </header>
-    // </div>
   );
 }
 
