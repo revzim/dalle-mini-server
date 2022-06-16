@@ -1,7 +1,8 @@
 # [dalle-mini-server][repo]
 
 ## dockerized dev environment / playground for [dalle-mini][dalle_mini]
-## generate images from text prompts
+
+### flask and react web app to generate images from text
 
 ![farmer][app_farmer]
 
@@ -17,9 +18,6 @@ superman punching spiderman on an iceberg
 ## [more images generated using silly prompts][1]
 
 ### development branch => `dev`
-
-### flask app server to use dalle-mini
-### react app client to generate images from a text prompt
 
 ### CLONE 
 * `git clone https://github.com/revzim/dalle-mini-server.git`
