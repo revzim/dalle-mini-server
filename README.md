@@ -4,7 +4,10 @@
 
 ### flask and react web app to generate images from text
 
-![farmer][app_farmer]
+![app][app_clown]
+
+scary clown playing a cello painted in the style of van gogh
+* ![clown][clown4]
 
 frog riding a unicorn standing on top of a mountain of cookies
 * ![frog][unicorn_frog]
@@ -67,7 +70,13 @@ dev build pack inspired by [dalle-playground][dalle_pg]
 [unicorn_frog2]: assets/frog%20riding%20a%20unicorn%20standing%20on%20top%20of%20a%20mountain%20of%20cookies/2.jpg
 [seal_otter]: assets/otter%20and%20seal%20sitting%20on%20an%20iceberg%20drawn%20in%20cartoon%20style/0.jpg
 [super_spider]: assets/superman%20punching%20spiderman%20on%20an%20iceberg/0.jpg
+[clown0]: assets/scary%20clown%20playing%20a%20cello%20painted%20in%20the%20style%20of%20van%20gogh/0.jpg
+[clown1]: assets/scary%20clown%20playing%20a%20cello%20painted%20in%20the%20style%20of%20van%20gogh/1.jpg
+[clown2]: assets/scary%20clown%20playing%20a%20cello%20painted%20in%20the%20style%20of%20van%20gogh/2.jpg
+[clown3]: assets/scary%20clown%20playing%20a%20cello%20painted%20in%20the%20style%20of%20van%20gogh/3.jpg
+[clown4]: assets/scary%20clown%20playing%20a%20cello%20painted%20in%20the%20style%20of%20van%20gogh/4.jpg
 [app_farmer]: assets/app/farmer.png
+[app_clown]: assets/app/clown.png
 [dalle_mini]: https://github.com/borisdayma/dalle-mini
 [dalle_pg]: https://github.com/saharmor/dalle-playground
 [server_addr]: http://localhost:8080
