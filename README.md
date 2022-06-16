@@ -1,31 +1,31 @@
 # [dalle-mini-server][repo]
 
 ## dockerized dev environment / playground for [dalle-mini][dalle_mini]
-
 ### flask and react web app to generate images from text
+---
 
 ![app][app_clown]
-
-scary clown playing a cello painted in the style of van gogh
-* ![clown][clown4]
-
-frog riding a unicorn standing on top of a mountain of cookies
-* ![frog][unicorn_frog]
-
-otter and seal sitting on an iceberg drawn in cartoon style.jpg
-* ![seal_otter][seal_otter]
-
-superman punching spiderman on an iceberg
-* ![super_spider][super_spider]
+---
+> scary clown playing a cello painted in the style of van gogh  
+![clown][clown4]
+---
+> frog riding a unicorn standing on top of a mountain of cookies  
+![frog][unicorn_frog]
+---
+> otter and seal sitting on an iceberg drawn in cartoon style.jpg  
+![seal_otter][seal_otter]
+---
+> superman punching spiderman on an iceberg  
+![super_spider][super_spider]
 
 ## [more images generated using silly prompts][1]
 
-### development branch => `dev`
-
-### CLONE 
+### CLONE
+---
 * `git clone https://github.com/revzim/dalle-mini-server.git`
 
 #### RUN
+---
 * DOCKER
   - docker compose
     - start
@@ -56,12 +56,14 @@ superman punching spiderman on an iceberg
 **-important installation/run note-**
 * *dalle-mini uses large models that sometimes can take a couple minutes to load, please be patient while the server starts*
 
+---
 ### for testing / educational purposes only
-
+---
 [dalle-mini][dalle_mini] trained models are used to generate images from a text prompt
 
 dev build pack inspired by [dalle-playground][dalle_pg]
 
+---
 #### author: revzim
 
 [1]: assets/
