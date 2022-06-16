@@ -1,5 +1,7 @@
 # dalle-mini-server
 
+## dockerized dev environment / playground for dalle-mini
+
 ### flask app server to use dalle-mini
 ### react app client to generate images from a text prompt
 
@@ -24,6 +26,10 @@
       - `cd client`
       - `yarn or npm install`
       - `yarn start or npm run start`
+
+
+#### for testing / educational purposes only
+#### [dalle-mini](https://github.com/borisdayma/dalle-mini) generate images from a text prompt
 
 #### author: revzim
 

@@ -7,7 +7,7 @@ function App() {
 
   const [title, setTitle] = useState("dalle-client | revzim")
 
-  const [subHeader, setSubHeader] = useState("built on top of dalle-mini")
+  const [subHeader, setSubHeader] = useState("AI generated images from text")
 
   const [loading, setLoading] = useState(false)
 
