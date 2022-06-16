@@ -1,13 +1,20 @@
-// import logo from './logo.svg';
 import { useState, useEffect } from "react"
 import * as axios from "axios"
-import { Grid, Card, CardHeader, CardContent, FormControl, InputLabel, Select, MenuItem, ImageList, ImageListItem, Box, Container, TextField, LinearProgress, Typography } from "@mui/material"
+import { Link, Button, Grid, Card, CardHeader, CardContent, FormControl, InputLabel, Select, MenuItem, ImageList, ImageListItem, Box, Container, TextField, LinearProgress, Typography } from "@mui/material"
+
+import { purple } from "@mui/material/colors"
 
 function App() {
 
-  const [title, setTitle] = useState("dalle-client | revzim")
+  const defaultTitle = "dalle-client | revzim"
 
-  const [subHeader, setSubHeader] = useState("AI generated images from text")
+  const defaultSubHeader = "AI generated images from text"
+
+  const github = "https://github.com/revzim"
+
+  const [title, setTitle] = useState(defaultTitle)
+
+  const [subHeader, setSubHeader] = useState(defaultSubHeader)
 
   const [loading, setLoading] = useState(false)
 
@@ -17,7 +24,7 @@ function App() {
 
   const [imgCount, setImgCount] = useState(1)
 
-  const [queueStartTime, setQueueStartTime] = useState(null)
+  // const [queueStartTime, setQueueStartTime] = useState(null)
 
   // const [timeNow, setTimeNow] = useState()
 
@@ -42,7 +49,7 @@ function App() {
     const val = e.target.value
     setImgText(val)
     if (val === "") {
-      setSubHeader("built on top of dalle-mini")
+      setSubHeader("AI generated images from text")
     }
   }
 
@@ -56,8 +63,8 @@ function App() {
   const queryImg = async (e) =>  {
     e.preventDefault()
     setImgVals([])
-    if (imgCount <= 0) return
-    setQueueStartTime(Date.now())
+    if (imgCount <= 0 || imgText === "") return
+    // setQueueStartTime(Date.now())
     setSubHeader(`generating images for: ${imgText}...`)
     setLoading(true)
     try {
@@ -68,7 +75,7 @@ function App() {
       const data = resp.data
       setImgVals(data)
       setSubHeader(`generated images for: ${imgText}`)
-      setQueueStartTime(null)
+      // setQueueStartTime(null)
       setLoading(false)
     } catch (e) {
       console.log("queryImg err", e)
@@ -82,7 +89,9 @@ function App() {
       const imgPrepend = "data:image/jpeg;base64,"
       const localImgSrc = `${imgPrepend}${val}`
       return (
-        <ImageListItem style={{ listStyle: "none",  }} key={val}><img width={window.innerWidth < 800 ? "100%" : "50%"} src={localImgSrc} className="App-logo" alt="logo" /></ImageListItem>
+        <ImageListItem sx={{ listStyle: "none",  }} key={val}>
+          <img style={{  }} src={localImgSrc} alt={val.substring(0, 12)} />
+        </ImageListItem>
       )
     })
   }
@@ -118,19 +127,24 @@ function App() {
 
   return (
     <Card>
-      <CardHeader title={title} subheader={subHeader} />
-      {/* <Box component="form"
-        noValidate
-        autoComplete="off"
-        onSubmit={queryImg}> */}
-        <Grid container spacing={2} direction="row" alignItems="center" >
+      <CardHeader sx={{ color: "#fff", textDecoration: "none" }}
+        title={<Link sx={{ color: "#fff" }} target="_" href={github} underline="none">{title}</Link>}
+        subheader={subHeader} />
+        <Grid container spacing={1} direction="row" >
           <Grid item xs={9}>
             { getDalleImgTextForm() }
           </Grid >
-          <Grid item xs={3} sx={{  }}>
+          <Grid item xs={3} sx={{ }}>
             { getDalleImgCountForm() }
           </Grid>
         </Grid>
+      <Button
+        disabled={loading} 
+        onClick={queryImg}
+        variant="contained"
+        sx={{ marginTop: 1, color: "#fff", backgroundColor: purple[800], fontWeight: "bold", width: "100%",  height: "100%" }}
+        >generate
+      </Button>
       {/* </Box> */}
       <CardContent>
         {
@@ -142,7 +156,7 @@ function App() {
           ) : imgVals.length > 0 ? (
             // <Container style={{ height: "80vh", overflowY: "auto", width: "100%" }}>
             <Container style={{ height: "100%", overflowY: "auto", width: "100%" }}>
-              <ImageList /*cols={3} rowHeight={250}*/ >
+              <ImageList sx={{ }} /*cols={3} rowHeight={250}*/ >
                 { getRenderContent(imgVals) }
               </ImageList>
             </Container>

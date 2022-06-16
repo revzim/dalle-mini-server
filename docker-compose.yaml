@@ -4,7 +4,7 @@ volumes:
     driver: local
 
 services:
-  dalle-client:
+  client:
     container_name: dalle_client_react
     image: dalle_client_react:latest
     build:
@@ -15,9 +15,9 @@ services:
       - 3000:3000
     stdin_open: true
     tty: true
-  dalle-mini-flaskapp:
+  server:
     container_name: dalle_server_flask
-    image: dalle_mini_flaskapp:latest
+    image: dalle_server_flask:latest
     build:
       context: ./server
       dockerfile: Dockerfile

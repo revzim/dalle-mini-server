@@ -1,6 +1,7 @@
 # [dalle-mini-server][repo]
 
 ## dockerized dev environment / playground for [dalle-mini][dalle_mini]
+## generate images from text prompts
 
 ![farmer][app_farmer]
 
@@ -26,7 +27,15 @@ superman punching spiderman on an iceberg
 #### RUN
 * DOCKER
   - docker compose
-    - `docker compose up`
+    - start
+      - `docker compose up`
+    - rebuild all
+      - `docker compose build`
+    - rebuild server
+      - `docker compose build dalle_server_flask`
+    - rebuild client
+      - `docker compose build dalle_client_react`
+    - to force rebuild of entire container add `--no-cache`
   - docker only
     - `server/` & `client/` both contain respective Dockerfiles
   - [dalle-mini api endpoints][server_addr] *local*
