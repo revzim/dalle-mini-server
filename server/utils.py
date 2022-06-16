@@ -20,7 +20,7 @@ def generate_model_images(model, text_prompt, num_images, args):
     buffered = BytesIO()
     img.save(buffered, format="JPEG")
     img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
-    print(f"generated [{text_prompt}] image #{idx}")
+    # print(f"generated [{text_prompt}] image #{idx}")
     list_of_imgs.append(img_str)
 
   print(f"generated {num_images} images from text prompt [{text_prompt}]")
@@ -36,8 +36,9 @@ def parse_request_and_generate_images(model, json_data, args):
   return generated_imgs
 
 def get_request_data(key, request):
+  default_text_prompt = "a gorilla running after a char shaped like a banana"
   request_data = {
-    "text": "a gorilla running after a giant banana car",
+    "text": default_text_prompt,
     "num_images": 1,
     "error": None
   }
@@ -47,7 +48,7 @@ def get_request_data(key, request):
     request_data["num_images"]  = json_data["num_images"]
   elif key == "get":
     reqArgs = request.args
-    request_data["text"] = reqArgs.get("text", default="a basketball humanoid sitting on a chair", type=str)
+    request_data["text"] = reqArgs.get("text", default=default_text_prompt, type=str)
     request_data["num_images"]  = reqArgs.get("num_images", default=2, type=int)
   else:
     request_data["error"] = 1

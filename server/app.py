@@ -59,7 +59,7 @@ def dotprint(line_len):
 
 with app.app_context():
   dotprint(2)
-  print(f"--> dalle-mini-server model: {args.model_version}")
+  print(f"dalle-mini-server model: {args.model_version}")
   dalle_model = DalleModel(args.model_version)
   dalle_model.generate_images("warm-up", 1)
   init_duration = (int(time.time()) - start_time)
