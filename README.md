@@ -5,18 +5,22 @@
 ---
 
 ![app][app_clown]
+
+---
+
+### SOME EXAMPLE IMAGES GENERATED WITH THIS REPO
 ---
 > ![clown][clown4]  
-scary clown playing a cello painted in the style of van gogh
----
+"scary clown playing a cello painted in the style of van gogh"
+
 > ![frog][unicorn_frog]  
-frog riding a unicorn standing on top of a mountain of cookies
----
+"frog riding a unicorn standing on top of a mountain of cookies"
+
 > ![seal_otter][seal_otter]  
-otter and seal sitting on an iceberg drawn in cartoon style.jpg
----
+"otter and seal sitting on an iceberg drawn in cartoon style"
+
 > ![super_spider][super_spider]  
-superman punching spiderman on an iceberg
+"superman punching spiderman on an iceberg"
 
 ## [more images generated using silly prompts][1]
 
