@@ -17,7 +17,7 @@ dalle_model = None
 
 parser = argparse.ArgumentParser(description = "dalle-mini-server: generate images from a text propmt")
 parser.add_argument("--port", type=int, default=8000, help = "backend port")
-parser.add_argument("--model_version", type = parse_arg_dalle_version, default = ModelSize.MINI, help = "mini, mega, mega_full")
+parser.add_argument("--model_version", type = parse_arg_dalle_version, default = ModelSize.MINI, help = "Mini, Mega, Mega_full")
 parser.add_argument("--save_to_disk", type = parse_arg_boolean, default = False, help = "Should save generated images to disk")
 args = parser.parse_args()
 
