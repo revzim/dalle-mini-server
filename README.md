@@ -80,6 +80,6 @@ dev build pack inspired by [dalle-playground][dalle_pg]
 [dalle_mini]: https://github.com/borisdayma/dalle-mini
 [dalle_pg]: https://github.com/saharmor/dalle-playground
 [server_addr]: http://localhost:8080
-[client_addr]: http://localhost:3000]
+[client_addr]: http://localhost:3000
 [pytorch]: https://pytorch.org/get-started/locally/
 [repo]: https://github.com/revzim/dalle-mini-server.git
