@@ -23,7 +23,7 @@ parser.add_argument("--save_to_disk", type = parse_arg_boolean, default = False,
 args = parser.parse_args()
 
 dalle_seed = parse_arg_dalle_seed(args.seed)
-dalle_seed_hash = hash(dalle_seed)
+# dalle_seed_hash = hash(dalle_seed)
 
 @app.route("/dalle", methods=["POST"])
 @cross_origin()
@@ -66,7 +66,7 @@ with app.app_context():
   dotprint(2)
   print(f"dalle-mini-server model: {args.model_version}")
   print(f"dalle-mini seed: {parse_arg_dalle_seed(args.seed)}")
-  print(f"dalle-mini hashed seed: {dalle_seed_hash}")
+  # print(f"dalle-mini hashed seed: {dalle_seed_hash}")
   dotprint(2)
   dalle_model = DalleModel(args.model_version)
   dalle_model.generate_images("warm-up", 1, "")
