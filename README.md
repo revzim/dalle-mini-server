@@ -46,13 +46,13 @@
   - [dalle-mini api endpoints][server_addr] *local*
   - [dalle-client frontend react app][client_addr] *local*
 * LOCAL (LINUX/UNIX*)
-  - server
+  - [server][server_dir]
     - [pytorch required][pytorch]
     - `cd server`
     - *python venv recommended* `python -m venv .`
     - `pip install -r requirements.txt`
     - `python app.py --port=8080`
-  - client
+  - [client][client_dir]
     - `cd client`
     - `yarn or npm install`
     - `yarn start or npm run start`
@@ -72,6 +72,8 @@ dev build pack inspired by [dalle-playground][dalle_pg]
 
 [1]: assets/
 [2]: assets/app/loading.png
+[server_dir]: server/
+[client_dir]: client/
 [unicorn_frog]: assets/frog%20riding%20a%20unicorn%20standing%20on%20top%20of%20a%20mountain%20of%20cookies/2.jpg
 [unicorn_frog2]: assets/frog%20riding%20a%20unicorn%20standing%20on%20top%20of%20a%20mountain%20of%20cookies/2.jpg
 [seal_otter]: assets/otter%20and%20seal%20sitting%20on%20an%20iceberg%20drawn%20in%20cartoon%20style/0.jpg
